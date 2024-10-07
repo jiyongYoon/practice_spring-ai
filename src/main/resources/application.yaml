@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: spring-ai
+
+  ai:
+    openai:
+      api-key: My-Key
+      chat:
+        options:
+          model: gpt-4o-mini
+      audio:
+        transcription:
+          options:
+            model: whisper-1
+            response-format: srt
+            temperature: 0
+
+custom:
+  system:
+    prompt: You are a friendly chat bot who calmly understands and answers questions.
+  summary:
+    prompt: 'Please read all the contents of the srt format you receive, and summarize and organize the contents. Please answer in Korean. \n\ncontents: \n%s'
+    file-path: './summary'
+  srt:
+    file-path: './files'
+  audio:
+    file-path: './audio'
